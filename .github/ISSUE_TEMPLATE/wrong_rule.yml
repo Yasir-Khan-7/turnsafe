@@ -1,0 +1,33 @@
+name: Wrong provider rule
+description: The API rejected (or would accept) a history differently from what turnsafe says.
+labels: [provider-rule]
+body:
+  - type: textarea
+    id: error
+    attributes:
+      label: Exact API error text
+      description: Paste the full error message from the API.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and platform
+      placeholder: "claude-opus-5-5 on the first-party API / gpt-4.1 on Azure / ..."
+    validations:
+      required: true
+  - type: textarea
+    id: messages
+    attributes:
+      label: Smallest messages list that reproduces it
+      description: Redact the content; only the structure matters.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: turnsafe
+    attributes:
+      label: What turnsafe said or did
+      description: Output of turnsafe.validate(messages).explain() and/or repair_detailed().
+      render: text

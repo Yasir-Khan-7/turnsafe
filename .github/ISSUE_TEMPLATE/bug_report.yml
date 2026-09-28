@@ -1,0 +1,22 @@
+name: Bug report
+description: Something in turnsafe crashes or behaves differently from its docs.
+labels: [bug]
+body:
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual behaviour
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: turnsafe and Python versions
+      placeholder: "turnsafe 0.1.0, Python 3.12"
