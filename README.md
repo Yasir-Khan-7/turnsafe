@@ -70,7 +70,8 @@ network access.
 pip install turnsafe
 ```
 
-It needs Python 3.10 or newer and has zero runtime dependencies.
+It needs Python 3.10 or newer and has zero runtime dependencies. On PyPI:
+[pypi.org/project/turnsafe](https://pypi.org/project/turnsafe/).
 
 ## Quickstart
 
